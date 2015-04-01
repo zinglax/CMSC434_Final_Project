@@ -1,0 +1,35 @@
+#!wing
+#!version=5.0
+##################################################################
+# Wing IDE project file                                          #
+##################################################################
+[project attributes]
+debug.launch-configs = (1,
+                        {'launch-96vRn39gng4gQ23V': ({},
+        {'buildcmd': ('project',
+                      None),
+         'env': ('project',
+                 [u'']),
+         'name': u'Launch manage.py',
+         'pyexec': ('project',
+                    u''),
+         'pypath': ('project',
+                    ''),
+         'pyrunargs': ('project',
+                       '-u'),
+         'runargs': u'runserver --noreload 192.168.1.25:8080',
+         'rundir': ('project',
+                    u'')})})
+proj.directory-list = [{'dirloc': loc('FridgeManagmentSystem'),
+                        'excludes': (),
+                        'filter': u'*',
+                        'include_hidden': False,
+                        'recursive': True,
+                        'watch_for_changes': True}]
+proj.file-type = 'shared'
+proj.launch-config = {loc('FridgeManagmentSystem/manage.py'): ('custom',
+        (u'',
+         'launch-96vRn39gng4gQ23V'))}
+proj.main-file = loc('FridgeManagmentSystem/manage.py')
+testing.test-framework = {loc('FridgeManagmentSystem/manage.py'): ':internal'\
+        ' djangotest'}
