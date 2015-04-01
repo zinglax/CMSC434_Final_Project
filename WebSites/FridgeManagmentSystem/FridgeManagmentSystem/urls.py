@@ -7,7 +7,10 @@ from django.conf.urls import patterns, include, url
 urlpatterns = patterns('',
     
     url(r'^$', 'fms.views.home', name='home'), 
-
+    
+    url(r'^item/$', 'fms.views.item', name='item'), 
+            
+    
     # Examples:
     # url(r'^$', 'FridgeManagmentSystem.views.home', name='home'),
     # url(r'^FridgeManagmentSystem/', include('FridgeManagmentSystem.foo.urls')),

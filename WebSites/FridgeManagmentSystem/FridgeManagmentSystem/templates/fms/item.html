@@ -1,0 +1,14 @@
+{% extends "fms/base.html" %}
+{% block content %}
+{% load staticfiles %}
+
+
+<div data-role="content" data-theme="{{ theme }}" class="ui-body ui-corner-all ui-overlay-shadow">
+<h2>This Item Was Found With Info</h2>
+
+{% for description, value in item_lookup_data %}
+<p>{{ description }}: {{ value }} </p>
+{% endfor %}
+
+</div>
+{% endblock %}
