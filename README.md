@@ -20,4 +20,4 @@ Fridge Organizer and Manager
 
 ### Story Board (In Class)
 ![Story Board Front](http://i.imgur.com/rzmRmHh.jpg)
-![Story Board Back](http://i.imgur.com/rzmRmHh.jpg)
+![Story Board Back](http://i.imgur.com/PmEDFyT.jpg)
