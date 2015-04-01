@@ -19,5 +19,12 @@ Fridge Organizer and Manager
 ***
 
 ### Story Board (In Class)
+
+#### Group Paper
 ![Story Board Front](http://i.imgur.com/rzmRmHh.jpg)
 ![Story Board Back](http://i.imgur.com/PmEDFyT.jpg)
+
+#### Story Board 1: Going To Store
+![Phil Going To the Store](http://i.imgur.com/8XoaqB6.png)
+![](http://i.imgur.com/hw0Zl8w.png)
+![](http://i.imgur.com/S0j9PwL.png)
