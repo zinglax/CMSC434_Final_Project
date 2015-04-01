@@ -30,5 +30,5 @@ Fridge Organizer and Manager
 ![](http://i.imgur.com/S0j9PwL.png)
 
 
-## Mobile Web and App Usage
+## Mobile Web and App Design 
 ![](https://lh3.googleusercontent.com/-0l7-0swUz-o/VRuRZAl8QiI/AAAAAAAAIpU/PYqsNZqax0o/w509-h904-no/20150401_023408.jpg)
