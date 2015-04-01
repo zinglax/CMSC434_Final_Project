@@ -13,7 +13,7 @@ from xmlrpclib import ServerProxy, Error
 # Dictionary to add objects passed to the through to the HTML
 script_args = {}
 script_args['theme'] = "a"
-script_args['site_url'] = 'http%3A//192.168.1.25:8080'
+script_args['site_url'] = 'http%3A//10.109.246.11:8080'
 
 # For Barcode Lookup
 rpc_key = '267b49217902750ecbe58a0e122b7394ab81199b'
