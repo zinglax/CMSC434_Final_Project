@@ -14,6 +14,32 @@
 	
 </head>
 
+<style type="text/css">
+body {
+    background: url({% static "./images/fruit2.png" %});
+    background-repeat: repeat-y;
+    background-position: left top;  
+    background-attachment: scroll ;
+    
+}
+.ui-header, .ui-footer {
+    
+    background: url({% static "./images/fruit2.png" %});
+    background-repeat: repeat-x, repeat-y;
+    background-position: left top;
+    
+}
+.ui-page,  .ui-btn {
+        background: transparent;
+}
+
+/* Fallback */
+.ui-nosvg .ui-icon-myicon:after {
+        background-image: url({% static "./images/smile_white.png" %});
+}
+</style>
+
+
 <body>
 
 <div data-role="page" id="home" data-theme="{{ theme }}">
