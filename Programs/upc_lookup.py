@@ -15,3 +15,9 @@ if __name__=='__main__':
 		s = ServerProxy('http://www.upcdatabase.com/xmlrpc')
 		params = { 'rpc_key': rpc_key, 'upc': sys.argv[1] }
 		print s.lookup(params)
+
+
+
+
+
+
