@@ -37,3 +37,7 @@ Fridge Organizer and Manager
 <iframe width="420" height="315"
 src="https://www.youtube.com/watch?v=P5k0soXXqAY">
 </iframe>
+
+<a href="https://www.youtube.com/watch?v=P5k0soXXqAY" target="_blank"><img src="http://img.youtube.com/vi/P5k0soXXqAY/0.jpg" 
+alt="IMAGE ALT TEXT HERE" width="240" height="180" border="10" /></a>
+
