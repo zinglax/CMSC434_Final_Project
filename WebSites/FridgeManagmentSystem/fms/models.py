@@ -1,5 +1,32 @@
 from django.db import models
 
+class Item(models.Model):
+
+    # from barcode site
+    status = models.CharField(max_length=150, blank=True, null=True) 
+    lastModifiedUTC = models.CharField(max_length=150, blank=True, null=True) 
+    description = models.CharField(max_length=150, blank=True, null=True) 
+    noCacheAfterUTC = models.CharField(max_length=150, blank=True, null=True) 
+    ean = models.CharField(max_length=150, blank=True, null=True) 
+    upce = models.CharField(max_length=150, blank=True, null=True) 
+    upc = models.CharField(max_length=150, blank=True, null=True) 
+    pendingUpdates = models.CharField(max_length=150, blank=True, null=True) 
+    found = models.CharField(max_length=150, blank=True, null=True) 
+    message = models.CharField(max_length=150, blank=True, null=True) 
+    size = models.CharField(max_length=150, blank=True, null=True) 
+    issuerCountry = models.CharField(max_length=150, blank=True, null=True) 
+    issuerCountryCode = models.CharField(max_length=150, blank=True, null=True) 
+    
+    # FMS fields
+    quantity = models.CharField(max_length=150, blank=True, null=True) 
+    expiration_date = models.CharField(max_length=150, blank=True, null=True) 
+    
+    # Hangers
+    hung_on = models.ForeignKey('Hanger', blank=True, null=True,on_delete=models.SET_NULL, )
+        
+    def __unicode__(self):        
+        return self.data 
+
 # Create your models here.
 ####################################################
 ## Hangers: Objects that store only one type of django data field

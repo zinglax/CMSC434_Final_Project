@@ -11,15 +11,30 @@
 <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.2/jquery.mobile.structure-1.4.2.min.css" />
 <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
 <script src="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.js"></script>
-	
+<script>
+$( document ).on( "pagecreate", "#home", function() {
+    $( document ).on( "swipeleft swiperight", "#home", function( e ) {
+        // We check if there is no open panel on the page because otherwise
+        // a swipe to close the left panel would also open the right panel (and v.v.).
+        // We do this by checking the data that the framework stores on the page element (panel: open).
+        if ( $( ".ui-page-active" ).jqmData( "panel" ) !== "open" ) {
+            if ( e.type === "swipeleft" ) {
+                $( "#right-panel" ).panel( "open" );
+            } else if ( e.type === "swiperight" ) {
+                $( "#left-panel" ).panel( "open" );
+            }
+        }
+    });
+});	
+</script>
 </head>
 
 <style type="text/css">
 body {
     background: url({% static "./images/fruit.png" %});
-    background-repeat: repeat-y;
+    background-repeat: no-repeat;
     background-position: left top;  
-    background-attachment: scroll ;
+    background-attachment: fixed ;
     
 }
 .ui-header, .ui-footer {
@@ -42,28 +57,33 @@ body {
 
 <body>
 
-<div data-role="page" id="home" data-theme="{{ theme }}" data-fullscreen="true" data-position="fixed">
+<div data-role="page" id="home" data-theme="{{ theme }}">
 
-   <!-- Nav Header  -->
-  <div data-role="header" data-position="fixed" data-fullscreen="true">  
-    <a href="/" data-shadow="false" data-iconshadow="false" class="ui-icon-nodisc" data-icon="home" data-iconpos="notext"></a>
-    
-    <a href="pic2shop://scan?callback={{ site_url }}/item/" data-shadow="false" data-iconshadow="false" class="ui-icon-nodisc" data-icon="camera" data-iconpos="notext"></a>
-
-    <h1>F.M.S.</h1>
-
-  </div><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+   <div data-role="header" data-theme="{{ theme }}">
+        <h1>Swipe left or right</h1>
+        <a href="#left-panel" data-icon="carat-r" data-iconpos="notext" data-shadow="false" data-iconshadow="false" class="ui-nodisc-icon">Open left panel</a>
+        <a href="#right-panel" data-icon="carat-l" data-iconpos="notext" data-shadow="false" data-iconshadow="false" class="ui-nodisc-icon">Open right panel</a>
+    </div>
 
 {% block content %}
 {% endblock %}
 
-  <!-- Nav Footer  -->
+<div data-role="panel" id="left-panel" data-theme="{{ theme }}">
+    <p>Left reveal panel.</p>
+    <a href="#" data-rel="close" class="ui-btn ui-corner-all ui-shadow ui-mini ui-btn-inline ui-icon-delete ui-btn-icon-left ui-btn-right">Close</a>
+</div><!-- /panel -->
+<div data-role="panel" id="right-panel" data-display="push" data-position="right" data-theme="{{ theme }}">
+    <p>Right push panel.</p>
+    <a href="#" data-rel="close" class="ui-btn ui-corner-all ui-shadow ui-mini ui-btn-inline ui-icon-delete ui-btn-icon-right">Close</a>
+    
+</div><!-- /panel -->
 
- <br><br>
-  <div data-role="footer" data-position="fixed" data-fullscreen="true">
-  <h1>Fridge Managment System</h1>
+  <!-- Nav Footer  -->
+<div data-role="footer" data-position="fixed" data-theme="{{ theme }}">
   
-  
+  <a href="/" data-shadow="false" data-iconshadow="false" class="ui-icon-nodisc" data-icon="home" data-iconpos="notext"></a>
+  <a href="pic2shop://scan?callback={{ site_url }}/item/" data-shadow="false" data-iconshadow="false" class="ui-icon-nodisc" data-icon="camera" data-iconpos="notext"></a>
+  <h1>F.M.S</h1>
 </div>
 
 </div>

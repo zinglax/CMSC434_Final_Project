@@ -17,7 +17,7 @@ debug.launch-configs = (1,
                     ''),
          'pyrunargs': ('project',
                        '-u'),
-         'runargs': u'runserver --noreload 10.109.246.11:8080',
+         'runargs': u'runserver --noreload 192.168.1.25:8081',
          'rundir': ('project',
                     u'')})})
 proj.directory-list = [{'dirloc': loc('FridgeManagmentSystem'),
