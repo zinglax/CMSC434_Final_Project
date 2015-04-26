@@ -16,8 +16,9 @@ from xmlrpclib import ServerProxy, Error
 # Dictionary to add objects passed to the through to the HTML
 script_args = {}
 script_args['theme'] = "a"
-#script_args['site_url'] = 'http%3A//10.109.250.219:8080'
-script_args['site_url'] = 'http%3A//192.168.1.25:8081'
+script_args['site_url'] = 'http%3A//10.109.85.237:8081'
+
+#script_args['site_url'] = 'http%3A//192.168.1.25:8081'
 
 
 # For Barcode Lookup

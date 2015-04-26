@@ -33,13 +33,8 @@ $( document ).on( "pagecreate", "#home", function() {
 body {
     background: url({% static "./images/fruit.png" %});
     background-repeat: no-repeat;
-<<<<<<< HEAD
     background-position: left top;  
     background-attachment: fixed ;
-=======
-    background-attachment: fixed;
->>>>>>> 9af007ed3f461a4eb16da4153ed20e8896867376
-    
 }
 .ui-header, .ui-footer {
     
@@ -48,8 +43,8 @@ body {
     background-position: left top;
     
 }
-.ui-page,  .ui-btn {
-        background: transparent;
+.ui-page,  .ui-btn, ui-content, .ui-panel-wrapper  {
+        background: rgba(237, 207, 108, 0.66);
 }
 
 /* Fallback */
@@ -57,10 +52,7 @@ body {
         background-image: url({% static "./images/smile_white.png" %});
 }
 </style>
-
-
 <body>
-
 <div data-role="page" id="home" data-theme="{{ theme }}">
 
    <div data-role="header" data-theme="{{ theme }}">
